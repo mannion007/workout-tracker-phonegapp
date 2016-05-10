@@ -13,3 +13,28 @@
 .statusbar-overlay {
     background: #000000;
 }
+
+.align-center {
+	text-align: center;
+}
+
+.red {
+	color:red;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.material-icons {
+	font-size: 60px;
+	color: #007aff;
+}
+
+.panel-left a {
+	color:#FFF;
+}
+
+.panel-left a.warn {
+	color:#FF0000;
+}
