@@ -1,6 +1,13 @@
-// Initialize app
-var myApp = new Framework7();
-
+//// Initialize app
+var myApp = new Framework7({
+     template7Pages: true,
+     template7Data: {
+        // This context will applied for page/template with "about.html" URL
+        'page:select_workout': {
+            mything: 'variable value'
+        }
+    }
+});
 
 // If we need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
@@ -30,9 +37,9 @@ $$(document).on('pageInit', function (e) {
     // Get page data from event data
     var page = e.detail.page;
 
-    if (page.name === 'about') {
+    if (page.name === 'index') {
         // Following code will be executed for page with data-page attribute equal to "about"
-        myApp.alert('Here comes About page');
+        myApp.alert('Yesh');
     }
 })
 
