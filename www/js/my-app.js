@@ -4,7 +4,7 @@ var myApp = new Framework7({
      template7Data: {
         // This context will applied for page/template with "about.html" URL
         'page:select_workout': {
-            mything: 'variable value'
+            myVariable: 'variable value'
         }
     }
 });
@@ -39,12 +39,15 @@ $$(document).on('pageInit', function (e) {
 
     if (page.name === 'index') {
         // Following code will be executed for page with data-page attribute equal to "about"
-        myApp.alert('Yesh');
     }
 })
 
 // Option 2. Using live 'pageInit' event handlers for each page
 $$(document).on('pageInit', '.page[data-page="about"]', function (e) {
     // Following code will be executed for page with data-page attribute equal to "about"
-    myApp.alert('Here comes About page');
 })
+
+// Hide side menu when a link is clicked
+$$('.panel-left a').on('click', function (e) {
+    myApp.closePanel();
+});
